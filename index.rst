@@ -1,4 +1,4 @@
-.. title:: Prism Pro - Operations Deep Dive
+.. title:: My Operations Deep Dive
 
 
 .. toctree::
@@ -7,11 +7,9 @@
   :name: _appendix
   :hidden:
 
-  tools_vms/linux_tools_vm
-
---------------------------------
-Prism Pro - Operations Deep Dive
---------------------------------
+-----------------------
+My Operations Deep Dive
+-----------------------
 
 *The estimated time to complete this lab is 60 minutes.*
 
@@ -25,23 +23,16 @@ Prism Pro takes a unique approach that maximizes the operation efficiency of an 
 Lab Setup
 +++++++++
 
-This lab requires a VM to be provisioned and will be stressed later in the lab to produce CPU and memory metrics.
+This lab requires the use of a web application (PrismProServer) that will be used as a proxy to Prism Central to view data and to simulate alerts.
 
-Applications provisioned as part of the  :ref:`linux_tools_vm` will be used to accomplish this.
+#.  Open the browser tab to the PrismProServer web interface.
+#.  Enter your Prism Central details in the Setup portion of the form.
+#.  Click ‘Begin Setup’ once you have filled in all the fields. This will get your environment ready for this lab. Keep this tab open during entire Prism Pro lab to return to as directed in later portions.
+#.  Once Setup completes, launch the PrismProServer by clicking the provided link. This should load the Prism Central UI. Use this version of the UI to go through the lab. If the link does not work on the first try, it is possible the PrismProServer might still be starting. Wait a few seconds and refresh the page.
 
-#. Please follow the instructions to deploy the :ref:`linux_tools_vm` before moving on with this lab.
-
-
-#. Right click the following URL to open a new tab and navigate to the webpage at http://10.42.247.70:8080/ and enter the details in the Setup portion of the form. Then click 'Begin Setup' once you have filled in all the fields. This will get your environment ready for this lab. **Keep this tab open during entire Prism Pro lab to return to as directed in later portions.**
-
-   .. figure:: images/ppro_08.png
-
-#. Once step 1 completes, launch the PrismProServer by clicking the provided link. This should load the Prism Central UI. Use this version of the UI to go through the lab. If the link does not work on the first try, it is possible the PrismProServer might still be starting. Wait a few seconds and refresh the page.
-
-   .. figure:: images/ppro_08b.png
 
 VM Efficiency
-+++++++++++++++++++++++++++
++++++++++++++
 
 Prism Pro uses X-Fit machine learning to detect the behaviors of VMs running within the managed clusters. Then applies a classification to VMs that are learned to be inefficient. The following are short descriptions of the different classifications:
 
@@ -68,9 +59,9 @@ Prism Pro uses X-Fit machine learning to detect the behaviors of VMs running wit
 
 
 Anomaly Detection
-+++++++++++++++++++++++++++++++
+++++++++++++++++++
 
-In this lab story you will take a look at VMs with an anomaly. An anomaly is a deviation from the normal learned behavior of a VM. The X-FIT alogrithms learn the normal behavior of VMs and represent that as a baseline range on the different charts for each VM.
+In this exercise you will take a look at VMs with an anomaly. An anomaly is a deviation from the normal learned behavior of a VM. The X-Fit alogrithms learn the normal behavior of VMs and represent that as a baseline range on the different charts for each VM.
 
 #. Now let's take a take a look at a VM by searching for ‘bootcamp_good’ and selecting ‘bootcamp_good_1’.
 
@@ -91,7 +82,7 @@ In this lab story you will take a look at VMs with an anomaly. An anomaly is a d
 Capacity Planning Runway
 ++++++++++++++++++++++++++++++++++++++
 
-Capacity runway is a measure of the remaining capacity left within a given cluster or node. There is an overall cluster runway as well as individual runway measurements for CPU, Memory and storage capacity. Lets view the Capacity Runway of your lab cluster.
+Capacity runway is a measure of the remaining capacity left within a given cluster or node. There is an overall cluster runway as well as individual runway measurements for CPU, Memory and storage capacity. Let's view the Capacity Runway of your lab cluster.
 
 #. In **Prism Central > Planning > Capacity Runway**.
 
@@ -145,7 +136,7 @@ Capacity runway is a measure of the remaining capacity left within a given clust
    .. figure:: images/ppro_20.png
 
 Increase Constrained VM Memory with X-Play
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++
 
 In this lab story we will now use X-Play to create a Playbook to automatically add memory to the lab VM that was created earlier, when a memory constraint is detected.
 
@@ -220,7 +211,7 @@ You are welcome to compose your own subject message. The above is just an exampl
 
    .. figure:: images/ppro_41.png
 
-#. **Switch tabs back to** the http://10.42.247.70:8080 page and continue to the Story 1-3 Step.
+#. **Switch tabs back to** the PrismProServer application and continue to the Story 1-3 Step.
 
    .. figure:: images/ppro_08b.png
 
@@ -246,7 +237,7 @@ You are welcome to compose your own subject message. The above is just an exampl
 
 
 Using X-Play with 3rd Party API
-+++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++
 
 For this story we will be using Habitica to show how we can use 3rd Party APIs with X-Play. Habitica is a free habit and productivity app that treats your real life like a game. We will be creating a task with Habitica.
 
