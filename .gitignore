@@ -1,6 +1,1 @@
-
-flow/.DS_Store
-taskman/.DS_Store
-flow/images/.DS_Store
-taskman/images/.DS_Store
-.DS_Store
+_build
