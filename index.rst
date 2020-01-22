@@ -208,7 +208,7 @@ In this lab story we will now use X-Play to create a Playbook to automatically a
 
    .. figure:: images/ppro_41.png
 
-#. Now we will simulate an alert for ‘VM Memory Constrained’ which will trigger the Playbook we just created. Open a new browser tab to https://www.nutanixtestdrive.com/alerts to open the Alert Generation UI.
+#. Now we will simulate an alert for ‘VM Memory Constrained’ which will trigger the Playbook we just created. Open a new browser tab to https://prism.nutanixtestdrive.com/alerts to open the Alert Generation UI.
 
    .. figure:: images/ppro_64.png
 
@@ -303,7 +303,7 @@ For this story we will be using Habitica to show how we can use 3rd Party APIs w
 
    .. figure:: images/ppro_55.png
 
-#. **Switch back to the other tab** running http://www.nutanixtestdrive.com/alerts
+#. **Switch back to the other tab** running http://prism.nutanixtestdrive.com/alerts
 
 #. Select the **VM Bully** radio button and select your VM. Then click **Simulate Alert**.
 
