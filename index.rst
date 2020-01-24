@@ -1,5 +1,12 @@
 .. title:: My Operations Deep Dive
 
+.. toctree::
+  :maxdepth: 2
+  :caption: My Operations
+  :name: _prismpro
+  :hidden:
+
+  index
 
 .. toctree::
   :maxdepth: 2
