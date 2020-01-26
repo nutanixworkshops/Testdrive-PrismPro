@@ -1,5 +1,12 @@
 .. title:: My Operations Deep Dive
 
+.. toctree::
+  :maxdepth: 2
+  :caption: My Operations
+  :name: _prismpro
+  :hidden:
+
+  index
 
 .. toctree::
   :maxdepth: 2
@@ -23,7 +30,18 @@ Prism Pro takes a unique approach that maximizes the operation efficiency of an 
 Lab Setup
 +++++++++
 
-To perform this lab, you will need at least 1 VM created to generate alerts against. This VM should be assigned 1vCPU and 2GB of memory. It doesn't need any disks or networking attached to it.
+Before starting this lab, you will need two things:
+
+#. Your custom URL
+
+   Please make a note of the URL of the Prism instance. It will look similar to https://prism7m5hh44u6b.nutanixtestdrive.com
+
+   .. note:: Your URL will be different as it specific to your environment.
+
+#. A VM created
+
+   You will also need at least 1 VM created to generate alerts against. This VM should be assigned 1vCPU and 2GB of memory. It doesn't need any disks or networking attached to it.
+
 
 VM Efficiency
 +++++++++++++
@@ -208,7 +226,7 @@ In this lab story we will now use X-Play to create a Playbook to automatically a
 
    .. figure:: images/ppro_41.png
 
-#. Now we will simulate an alert for ‘VM Memory Constrained’ which will trigger the Playbook we just created. Open a new browser tab to https://prism.nutanixtestdrive.com/alerts to open the Alert Generation UI.
+#. Now we will simulate an alert for ‘VM Memory Constrained’ which will trigger the Playbook we just created. Take a note of the custom URL of your Prism instance as described in Lab Setup, and open a new browser tab to https://<your_custom_prism_url>/alerts to open the Alert Generation UI.
 
    .. figure:: images/ppro_64.png
 
@@ -303,7 +321,7 @@ For this story we will be using Habitica to show how we can use 3rd Party APIs w
 
    .. figure:: images/ppro_55.png
 
-#. **Switch back to the other tab** running http://prism.nutanixtestdrive.com/alerts
+#. **Switch back to the other tab** running http://<your_custom_prism_url>/alerts
 
 #. Select the **VM Bully** radio button and select your VM. Then click **Simulate Alert**.
 
